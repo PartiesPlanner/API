@@ -1,45 +1,35 @@
 exports.seed = async function (knex) {
-  await knex('exercises').del()
-  await knex('exercises').insert([
+  await knex('services').del()
+  await knex('services').insert([
     {
       name: 'Distribuidora Itajubá',
-      series: 4,
-      repetitions: 12,
       group: 'bebidas',
-      demo: 'supino_inclinado_com_barra.gif',
+      description: 'As melhores bebidas se encontram aqui!',
       thumb: 'dist1.jpg',
     },
     {
       name: 'Bebidas 24h',
-      series: 3,
-      repetitions: 12,
       group: 'bebidas',
-      demo: 'crucifixo_reto.gif',
+      description: 'Bebidas geladas a qualquer hora do dia!',
       thumb: 'dist2.jpg'
     },
     {
       name: 'Sítio Novo Horizonte',
-      series: 3,
-      repetitions: 12,
       group: 'locais',
-      demo: 'supino_reto_com_barra.gif',
+      description: 'Sítio com área de lazer com piscina e churrasqueira!',
       thumb: 'sitio.jpg'
     },
     {
       name: 'DuChef Buffet',
-      series: 3,
-      repetitions: 12,
       group: 'Comidas',
-      demo: 'frances_deitado_com_halteres.gif',
-      thumb: 'frances_deitado_com_halteres.png'
+      description: 'Os melhores pratos a sua disposição!',
+      thumb: 'buffet.jpg'
     },
     {
       name: 'Doces Manias',
-      series: 3,
-      repetitions: 12,
       group: 'Comidas',
-      demo: 'frances_deitado_com_halteres.gif',
-      thumb: 'frances_deitado_com_halteres.png'
+      description: 'Docinhos, bolos personalizados e brindes!',
+      thumb: 'docesmanias.jpg'
     }
   ]);
 };
